@@ -138,14 +138,14 @@
     <label>Выберите валюты:</label><br>
     <span class="geo"><input type="checkbox" name="currencies" value="EUR" checked> EUR</span>
     <span class="geo"><input type="checkbox" name="currencies" value="USD" checked> USD</span>
-    <span class="geo"><input type="checkbox" name="currencies" value="RUB" checked> RUB</span>
-    <span class="geo"><input type="checkbox" name="currencies" value="TRY" checked> TRY</span>
+    <!-- <span class="geo"><input type="checkbox" name="currencies" value="RUB" checked> RUB</span> -->
+    <!-- <span class="geo"><input type="checkbox" name="currencies" value="TRY" checked> TRY</span> -->
     <span class="geo"><input type="checkbox" name="currencies" value="KZT" checked> KZT</span>
     <span class="geo"><input type="checkbox" name="currencies" value="BRL" checked> BRL</span>
     <span class="geo"><input type="checkbox" name="currencies" value="AZN" checked> AZN</span>
     <span class="geo"><input type="checkbox" name="currencies" value="UZS" checked> UZS</span>
     <span class="geo"><input type="checkbox" name="currencies" value="INR" checked> INR</span>
-    <span class="geo"><input type="checkbox" name="currencies" value="PEN" checked> PEN</span>
+    <!-- <span class="geo"><input type="checkbox" name="currencies" value="PEN" checked> PEN</span> -->
     <span class="geo"><input type="checkbox" name="currencies" value="CLP" checked> CLP</span>
     <span class="geo"><input type="checkbox" name="currencies" value="MXN" checked> MXN</span>
     <span class="geo"><input type="checkbox" name="currencies" value="CAD" checked> CAD</span>
@@ -308,7 +308,8 @@ function downloadCSV() {
     const positions = document.getElementById('positions').value.split(',');
     const selectedCurrencies = Array.from(document.querySelectorAll('input[name="currencies"]:checked')).map(el => el.value);
     
-    const allCurrencies = ["EUR", "USD", "RUB", "TRY", "KZT", "BRL", "AZN", "UZS", "INR", "PEN", "CLP", "MXN", "CAD", "BDT"];
+    //const allCurrencies = ["EUR", "USD", "RUB", "TRY", "KZT", "BRL", "AZN", "UZS", "INR", "PEN", "CLP", "MXN", "CAD", "BDT"];
+    const allCurrencies = ["EUR", "USD", "KZT", "BRL", "AZN", "UZS", "INR", "CLP", "MXN", "CAD", "BDT"];
     const csvHeaders = ["Name"].concat(allCurrencies);
 
     let csvContent = "data:text/csv;charset=utf-8,";
@@ -360,7 +361,8 @@ function downloadStageCSV() {
     const bonusSportPositions = document.getElementById('bonus-sport-positions').value.split(',').map(pos => pos.trim());
     const selectedCurrencies = Array.from(document.querySelectorAll('input[name="currencies"]:checked')).map(el => el.value);
     
-    const allCurrencies = ["EUR", "USD", "RUB", "TRY", "KZT", "BRL", "AZN", "UZS", "INR", "PEN", "CLP", "MXN", "CAD", "BDT"];
+    //const allCurrencies = ["EUR", "USD", "RUB", "TRY", "KZT", "BRL", "AZN", "UZS", "INR", "PEN", "CLP", "MXN", "CAD", "BDT"];
+    const allCurrencies = ["EUR", "USD", "KZT", "BRL", "AZN", "UZS", "INR", "CLP", "MXN", "CAD", "BDT"];
     const csvHeaders = ["Rew Users From", "Rew Users To", "Wallet/Type", "BonusID", "Text", "Reward Variable"].concat(allCurrencies);
 
     let csvContent = "data:text/csv;charset=utf-8,";
