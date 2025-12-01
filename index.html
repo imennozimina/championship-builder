@@ -145,12 +145,12 @@
     <span class="geo"><input type="checkbox" name="currencies" value="INR" checked> INR</span>
     <span class="geo"><input type="checkbox" name="currencies" value="CLP" checked> CLP</span>
     <span class="geo"><input type="checkbox" name="currencies" value="MXN" checked> MXN</span>
-    <span class="geo"><input type="checkbox" name="currencies" value="CAD" checked> CAD</span>
     <span class="geo"><input type="checkbox" name="currencies" value="BDT" checked> BDT</span>
     <span class="geo"><input type="checkbox" name="currencies" value="GTQ" checked> GTQ</span>
     <span class="geo"><input type="checkbox" name="currencies" value="HNL" checked> HNL</span>
     <span class="geo"><input type="checkbox" name="currencies" value="BOB" checked> BOB</span>
-    <span class="geo"><input type="checkbox" name="currencies" value="NGN" checked> NGN</span><br><br>
+    <span class="geo"><input type="checkbox" name="currencies" value="NGN" checked> NGN</span>
+    <span class="geo"><input type="checkbox" name="currencies" value="KES" checked> KES</span><br><br>
 
     <button onclick="generateForm()">🧩 Группировать</button>
     
@@ -184,12 +184,12 @@ const currencyFormats = {
     'INR': (value) => `${formatINR(value)} INR`,
     'CLP': (value) => `$ ${value.toLocaleString()}`,
     'MXN': (value) => `$ ${value.toLocaleString()}`,
-    'CAD': (value) => `$ ${value.toLocaleString()}`,
     'BDT': (value) => `${formatBDT(value)} BDT`,
     'GTQ': (value) => `Q${value.toLocaleString('en-US').replace(/\./g, ',')}`,
     'HNL': (value) => `L ${value.toLocaleString('en-US').replace(/\./g, ',')}`,
     'BOB': (value) => `Bs ${value.toLocaleString('de-DE')}`,
     'NGN': (value) => `₦${value.toLocaleString('en-US').replace(/\./g, ',')}`,
+    'KES': (value) => `KSH ${value.toLocaleString('en-US').replace(/\./g, ',')}`,
 };
 
 function formatINR(value) {
