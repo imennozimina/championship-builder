@@ -145,12 +145,16 @@
     <span class="geo"><input type="checkbox" name="currencies" value="INR" checked> INR</span>
     <span class="geo"><input type="checkbox" name="currencies" value="CLP" checked> CLP</span>
     <span class="geo"><input type="checkbox" name="currencies" value="MXN" checked> MXN</span>
+    <span class="geo"><input type="checkbox" name="currencies" value="CRC" checked> CRC</span>
+    <span class="geo"><input type="checkbox" name="currencies" value="NIO" checked> NIO</span>
+    <span class="geo"><input type="checkbox" name="currencies" value="GYD" checked> GYD</span>
     <span class="geo"><input type="checkbox" name="currencies" value="BDT" checked> BDT</span>
     <span class="geo"><input type="checkbox" name="currencies" value="GTQ" checked> GTQ</span>
     <span class="geo"><input type="checkbox" name="currencies" value="HNL" checked> HNL</span>
     <span class="geo"><input type="checkbox" name="currencies" value="BOB" checked> BOB</span>
     <span class="geo"><input type="checkbox" name="currencies" value="NGN" checked> NGN</span>
-    <span class="geo"><input type="checkbox" name="currencies" value="KES" checked> KES</span><br><br>
+    <span class="geo"><input type="checkbox" name="currencies" value="KES" checked> KES</span>
+    <span class="geo"><input type="checkbox" name="currencies" value="CDF" checked> CDF</span><br><br>
 
     <button onclick="generateForm()">🧩 Группировать</button>
     
@@ -184,12 +188,16 @@ const currencyFormats = {
     'INR': (value) => `${formatINR(value)} INR`,
     'CLP': (value) => `$ ${value.toLocaleString()}`,
     'MXN': (value) => `$ ${value.toLocaleString()}`,
+    'CRC': (value) => `₡ ${value.toLocaleString('de-DE')}`,
+    'NIO': (value) => `C$ ${value.toLocaleString('de-DE')}`,
+    'GYD': (value) => `$ ${value.toLocaleString('en-US').replace(/\./g, ',')}`,
     'BDT': (value) => `${formatBDT(value)} BDT`,
     'GTQ': (value) => `Q${value.toLocaleString('en-US').replace(/\./g, ',')}`,
     'HNL': (value) => `L ${value.toLocaleString('en-US').replace(/\./g, ',')}`,
     'BOB': (value) => `Bs ${value.toLocaleString('de-DE')}`,
     'NGN': (value) => `₦${value.toLocaleString('en-US').replace(/\./g, ',')}`,
     'KES': (value) => `KSH ${value.toLocaleString('en-US').replace(/\./g, ',')}`,
+    'CDF': (value) => `${value.toLocaleString()} FC`,
 };
 
 function formatINR(value) {
